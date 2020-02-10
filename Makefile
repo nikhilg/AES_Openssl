@@ -109,6 +109,8 @@ Makefile: AES_Openssl.pro ../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/win32-g++
 		../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_concurrent_private.pri \
 		../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_core.pri \
 		../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_core_private.pri \
+		../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_datavisualization.pri \
+		../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_datavisualization_private.pri \
 		../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_dbus.pri \
 		../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_dbus_private.pri \
 		../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_designer.pri \
@@ -162,10 +164,10 @@ Makefile: AES_Openssl.pro ../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/win32-g++
 		../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_quicktemplates2_private.pri \
 		../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_quickwidgets.pri \
 		../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_quickwidgets_private.pri \
-		../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_remoteobjects.pri \
-		../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_remoteobjects_private.pri \
-		../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_repparser.pri \
-		../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_repparser_private.pri \
+		../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_script.pri \
+		../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_script_private.pri \
+		../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_scripttools.pri \
+		../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_scripttools_private.pri \
 		../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_scxml.pri \
 		../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_scxml_private.pri \
 		../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_sensors.pri \
@@ -277,6 +279,8 @@ Makefile: AES_Openssl.pro ../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/win32-g++
 ../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_concurrent_private.pri:
 ../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_core.pri:
 ../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_core_private.pri:
+../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_datavisualization.pri:
+../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_datavisualization_private.pri:
 ../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_dbus.pri:
 ../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_dbus_private.pri:
 ../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_designer.pri:
@@ -330,10 +334,10 @@ Makefile: AES_Openssl.pro ../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/win32-g++
 ../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_quicktemplates2_private.pri:
 ../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_quickwidgets.pri:
 ../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_quickwidgets_private.pri:
-../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_remoteobjects.pri:
-../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_remoteobjects_private.pri:
-../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_repparser.pri:
-../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_repparser_private.pri:
+../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_script.pri:
+../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_script_private.pri:
+../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_scripttools.pri:
+../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_scripttools_private.pri:
 ../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_scxml.pri:
 ../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_scxml_private.pri:
 ../../../Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/modules/qt_lib_sensors.pri:

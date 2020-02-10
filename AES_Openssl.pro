@@ -34,12 +34,11 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 INCLUDEPATH += openssl
 
 #LIBS += openssl/libcrypto-1_1.dll -ldl -lpthread
-LIBS += openssl/libcrypto-1_1.dll -lpthread
+LIBS += openssl/libcrypto-1_1.dll
 LIBS += openssl/libssl-1_1.dll
 
 #LIBS += openssl/libcrypto.dll.a -lpthread
 #LIBS += openssl/libssl.dll.a
-
 
 #win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../../../Qt/Qt5.9.9/Tools/OpenSSL/Win_x86/lib/ -llibssl
 #else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../../../Qt/Qt5.9.9/Tools/OpenSSL/Win_x86/lib/ -llibssld

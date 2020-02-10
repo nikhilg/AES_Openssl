@@ -15,7 +15,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 }
 
-void startEncryption()
+void MainWindow:: startEncryption(QString messageStr)
 {
     //qInfo is qt5.5+ only.
     qInfo() << "C++ Style Info Message";
@@ -39,6 +39,8 @@ void startEncryption()
     unsigned char *plaintext =
         (unsigned char *)"The quick brown";
 
+    QByteArray array = messageStr.toLocal8Bit();
+    plaintext = (unsigned char*)array.data();
     /*
      * Buffer for ciphertext. Ensure the buffer is long enough for the
      * ciphertext which may be longer than the plaintext, depending on the
@@ -91,6 +93,15 @@ void startEncryption()
     std::cout << "Encrypted Text: " << ciphertext << std::endl;
     std::cout << "Encrypted Text Length: " << ciphertext_len << std::endl;
 
+    QString myencrypted;
+    for(int i=0; i<ciphertext_len; i++)
+    {
+        myencrypted.append( ciphertext[i]);
+    }
+
+    ui->lineEdit_2->setText(myencrypted.toLatin1());
+    qDebug() << "This is encrypte: " << myencrypted.toLatin1();
+
 //    BIO_dump_fp (stdout, (const char *)ciphertext, ciphertext_len);
 
     EVP_CIPHER_CTX *ctx1;
@@ -140,6 +151,13 @@ void startEncryption()
     /* Show the decrypted text */
     std::cout << "Decrypted text is: ";
     std::cout << decryptedtext << std::endl;
+
+    QString myDecrypted;
+    for(int i=0; i<decryptedtext_len; i++)
+    {
+        myDecrypted.append( decryptedtext[i]);
+    }
+    ui->lineEdit_3->setText(myDecrypted);
 }
 
 MainWindow::~MainWindow()
@@ -149,5 +167,12 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    startEncryption();
+    qDebug() << ui->lineEdit->text() << endl;
+    QString messageStr(ui->lineEdit->text());
+    this->startEncryption(messageStr);
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+
 }
