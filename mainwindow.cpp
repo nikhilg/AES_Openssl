@@ -39,8 +39,8 @@ void MainWindow:: startEncryption(QString messageStr)
     unsigned char *plaintext =
         (unsigned char *)"The quick brown";
 
-    QByteArray array = messageStr.toLocal8Bit();
-    plaintext = (unsigned char*)array.data();
+    QByteArray messageStrBytes = messageStr.toLocal8Bit();
+    plaintext = (unsigned char*)messageStrBytes.data();
     /*
      * Buffer for ciphertext. Ensure the buffer is long enough for the
      * ciphertext which may be longer than the plaintext, depending on the
@@ -100,7 +100,24 @@ void MainWindow:: startEncryption(QString messageStr)
     }
 
     ui->lineEdit_2->setText(myencrypted.toLatin1());
+
+
+    char* messageData = messageStrBytes.data();
+    qDebug() << "This is original text: " << messageData;
+
     qDebug() << "This is encrypte: " << myencrypted.toLatin1();
+    QByteArray myEncryptedBytes = QByteArray(reinterpret_cast<char*>(ciphertext), len);
+    qDebug() << "This is base64 of encrypted msg: " <<  myEncryptedBytes.toBase64();
+
+    QString tmp = "test";
+    QByteArray text = tmp.toLocal8Bit();
+    char *data = new char[text.size() + 1];
+    strcpy(data, text.data());
+    delete [] data;
+    bool ok;
+    qDebug() << "This is binary of text: " << text.toHex(':');
+    qDebug() << "This is binary of original text: " << messageStrBytes.toHex(':');
+    qDebug() << "This is binary of encrypted: " << myEncryptedBytes.toHex(':');
 
 //    BIO_dump_fp (stdout, (const char *)ciphertext, ciphertext_len);
 
